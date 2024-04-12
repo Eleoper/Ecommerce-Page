@@ -1,10 +1,12 @@
+
+/* Edits of the whole webpage*/
 body{
-    margin: 0px;   
+    margin: 0px; 
+    background-color: rgb(0, 0, 0);
 }
 
 
-/* Header section */
-
+/* Header section of the Page*/
 header{
     width: 100%;
     position: relative;
@@ -15,7 +17,7 @@ header nav{
     padding: 1% 1%;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(180, 0, 0);
+    background-color: rgba(204, 0, 0, 0.979);
 }
 
 section.navBar a{
@@ -24,10 +26,15 @@ section.navBar a{
 }
 
 /* links when clicked*/
-
-a:hover{ 
+span.sideBarIcon:hover{
     text-decoration: none;
-    color:rgb(255, 0, 0);
+    color:rgb(255, 255, 255);
+    transition: .5s;
+}
+
+a:hover i{ 
+    text-decoration: none;
+    color:rgb(255, 255, 255);
     transition: .5s;
 }
 
@@ -48,7 +55,7 @@ a:link{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #000000;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -61,13 +68,13 @@ a:link{
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: white;
     display: block;
     transition: 0.3s;
 }
 
 .sideBar a:hover{
-    color: #f1f1f1;
+    color: rgba(204, 0, 0, 0.979);
 }
 
 .sideBar .closebtn{
@@ -88,3 +95,71 @@ span.sideBarIcon{
     font-size:30px;
     cursor:pointer;
 }
+
+/* Icons Styling*/
+i{
+    font-size: 30px;
+    padding: 0px 4px;
+}
+/* End of Header Section of the Page*/
+
+
+/* Main Body of the Page*/
+main.mainContent{
+    min-height: 100vh;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    margin: 10px 0px;
+}
+
+/* End of Main Body of the Page*/
+
+
+/* Footer Section of the Page*/
+section.footerTop{
+    display: flex;
+    justify-content: center;
+}
+
+section.footerTop a{
+    text-decoration: none;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.85);
+    margin: 10px;
+    border-radius: 50%;
+}
+
+section.footerTop a i{
+    color:rgb(255, 255, 255);
+    font-size: 30px;
+}
+
+/* Hover Effects on Icons*/
+.footerTop a:hover i{
+    color: rgba(204, 0, 0, 0.979);
+    transition: .5s;
+}
+
+section.footerMid{
+    display: flex;
+    justify-content: center;
+}
+
+section.footerMid a{
+    justify-content: center;
+    font-size: 20px;
+    color:white;
+    padding: 10px 20px;
+    border-radius: 50%;
+}
+
+/* Hover Effects on Sections*/
+.footerMid a:hover{
+    color: rgba(204, 0, 0, 0.979);
+    transition: .5s;
+}
+section.footerBottom p{
+    text-align: center;
+    color:white;
+}
+/* End of Footer Section of the Page*/
