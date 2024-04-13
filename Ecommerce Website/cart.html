@@ -148,6 +148,29 @@
                 </div>
             </div>
         </section>
+    
+
+    <form>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+      
+        <label for="zip">ZIP code:</label>
+        <input type="text" id="zip" name="zip" required>
+      
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+          <option value="">Select a country</option>
+          <option value="USA">USA</option>
+          <option value="Canada">Canada</option>
+          <option value="UK">UK</option>
+          <!-- Add more options as needed -->
+        </select>
+      
+        <input type="hidden" id="card" name="card" value="hidden-card-info">
+      
+        <button type="submit">Submit</button>
+      </form>
+
     </main>
 
     <footer>
