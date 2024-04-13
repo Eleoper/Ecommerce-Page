@@ -21,3 +21,7 @@ Ngoc Bui has created the cart.html file for website
 Ngoc Bui added styles to the cart page
 Ngoc Bui added images folder 
 Ngoc added comments inside css
+
+4/12/2024 Notes - 
+Eleo added search bar in html
+Eleo added styles to search bar in css
