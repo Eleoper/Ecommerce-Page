@@ -29,3 +29,13 @@ Eleo added styles to search bar in css
 4/13/2024 Updates -
 Ngoc updated pay info form includes customer informations
 Ngoc added styles to the form in css
+
+4/13/2024 Changelog -
+Cameron added html pages for the sidebar sections: Shirts, Shorts, and Sweaters
+Cameron added four items on each page of the sidebar sections
+Cameron edited the titles for the cart and index pages to "Cart - Online Marketplace" and "Homepage - Online Marketplace" 
+	(feel free to change)
+Cameron edited hrefs in each file to link to the new htmls (shirts.html, shorts.html, sweaters.html)
+Cameron edited the href for the logo at the top of the page to link to index.html 
+	NOTE: **For the logo href, please change if it's not the intended use**
+

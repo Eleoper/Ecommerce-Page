@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sweaters - Online Marketplace</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="myscripts.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <section id="mySideBar" class="sideBar">
+                <section class="searchBar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" placeholder="Search . . .">
+                </section>
+                <a class="closebtn" onclick="closeNav()">&times;</a>
+                <ul>
+                    <li><a href="shirts.html">Shirts</a></li>
+                    <li><a href="shorts.html">Shorts</a></li>
+                    <li><a href="sweaters.html">Sweaters</a></li>
+                </ul>
+                <section>
+                    
+                </section>
+            </section>
+            <span class="sideBarIcon" onclick="openNav()">&#9776;</span>
+            <section class="logo">
+                <a href="index.html"><i class="fa-brands fa-suse"></i></a>
+            </section>
+            <section class="navBar">
+                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#"><i class="fa-solid fa-user"></i></a>
+            </section>
+        </nav>
+    </header>
+
+    <main class="mainContent">
+        <section class="productDisplay">
+            <div class="productItem">
+                <img src="images/sweaters/Fleece.jpg" alt="Fleece Sweater" class="roundedImage">
+                <p>Fleece Crewneck Sweater</p>
+                <p class="itemPrice">$44.99</p>
+            </div>
+            <div class="productItem">
+                <img src="images/sweaters/Cardigan.jpg" alt="Cardigan" class="roundedImage">
+                <p>Cardigan</p>
+                <p class="itemPrice">$99.99</p>
+            </div>
+            <div the="productItem">
+                <img src="images/sweaters/Pullover.jpg" alt="Pullover" class="roundedImage">
+                <p>Pullover</p>
+                <p class="itemPrice">$19.99</p>
+            </div>
+            <div class="productItem">
+                <img src="images/sweaters/Cashmere.jpg" alt="Cashmere Sweater" class="roundedImage">
+                <p>Cashmere Sweater</p>
+                <p class="itemPrice">$59.99</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="footerTop">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        </section>
+        <section class="footerMid">
+            <a href="#">About Us</a>
+            <a href="#">Policies</a>
+            <a href="#">Contact Us</a>
+        </section>
+        <section class="footerBottom">
+            <p>Copyright &copy;2024 | Designed By SmashBros</p>
+        </section>
+    </footer>
+</body>
+</html>

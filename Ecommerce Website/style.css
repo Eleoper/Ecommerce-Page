@@ -370,5 +370,26 @@ section.cart-container{
         background: #04AA6D;
     }
 
- 
+ /* Start of Sidebar Sections */
+	 /* Constrain images to 200x200 pixels and make them rounded */
+.roundedImage {
+	width: 300px;
+	height: 300px;
+	border-radius: 10px; /* Adjust the border-radius as needed for rounded corners */
+	object-fit: cover; /* Ensures the image covers the area without distorting aspect ratio */
+}
+
+/* Grid layout for products */
+.productDisplay {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr); /* Creates two columns */
+	grid-gap: 20px; /* Space between the grid items */
+	padding: 20px; /* Padding around the grid */
+	justify-items: center; /* Center the items horizontally */
+	align-items: center; /* Center the items vertically */
+}
+
+.productItem {
+	text-align: center; /* Center the text below the image */
+}
 
