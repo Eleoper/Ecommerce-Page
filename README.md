@@ -38,4 +38,6 @@ Cameron edited the titles for the cart and index pages to "Cart - Online Marketp
 Cameron edited hrefs in each file to link to the new htmls (shirts.html, shorts.html, sweaters.html)
 Cameron edited the href for the logo at the top of the page to link to index.html 
 	NOTE: **For the logo href, please change if it's not the intended use**
+Cameron added DEAL OF THE DAY to index.html Homepage
+Cameron added three items for the deals of the day
 

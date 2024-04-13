@@ -370,8 +370,8 @@ section.cart-container{
         background: #04AA6D;
     }
 
- /* Start of Sidebar Sections */
-	 /* Constrain images to 200x200 pixels and make them rounded */
+/* Start of Sidebar Sections */
+/* Constrain images to 300x300 pixels and make them rounded */
 .roundedImage {
 	width: 300px;
 	height: 300px;
@@ -392,4 +392,29 @@ section.cart-container{
 .productItem {
 	text-align: center; /* Center the text below the image */
 }
+/* End of Sidebar Items */
+
+/* Start of Deal of the Day */
+.dealOfDay {
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.featuredProducts {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.roundedImageLarge {
+	width: 500px;
+	height: 500px;
+	border-radius: 10px; /* Adjust the border-radius as needed for rounded corners */
+	object-fit: cover; /* Ensures the image covers the area without distorting aspect ratio */
+/*End of Deal of the Day */
+
 
