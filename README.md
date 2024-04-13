@@ -25,3 +25,7 @@ Ngoc added comments inside css
 4/12/2024 Notes - 
 Eleo added search bar in html
 Eleo added styles to search bar in css
+
+4/13/2024 Updates -
+Ngoc updated pay info form includes customer informations
+Ngoc added styles to the form in css
