@@ -15,3 +15,4 @@ Eleo added footer in html - added icons, sections, and trademark
 Eleo added styles for footer in css
 Edded changed styles and added transitions in css for header, sidebar, and footer
 Eleo added comments inside css
+
