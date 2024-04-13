@@ -16,3 +16,8 @@ Eleo added styles for footer in css
 Edded changed styles and added transitions in css for header, sidebar, and footer
 Eleo added comments inside css
 
+4/12/2024 Notes -
+Ngoc Bui has created the cart.html file for website
+Ngoc Bui added styles to the cart page
+Ngoc Bui added images folder 
+Ngoc added comments inside css
