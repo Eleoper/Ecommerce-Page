@@ -148,26 +148,83 @@
                 </div>
             </div>
         </section>
-    <form>
-        <label for="address">Address:</label>
-        <input type="text" id="address" name="address" required>
-      
-        <label for="zip">ZIP code:</label>
-        <input type="text" id="zip" name="zip" required>
-      
-        <label for="country">Country:</label>
-        <select id="country" name="country" required>
-          <option value="">Select a country</option>
-          <option value="USA">USA</option>
-          <option value="Canada">Canada</option>
-          <option value="UK">UK</option>
-          <!-- Add more options as needed -->
-        </select>
-      
-        <input type="hidden" id="card" name="card" value="hidden-card-info">
-      
-        <button type="submit">Submit</button>
-      </form>
+        <div class="form-container">
+        <form class="customer-info">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            <br>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            <br>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+            <br>
+            <label for="zip">ZIP code:</label>
+            <input type="text" id="zip" name="zip" required>
+            <br>
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+            <option value="">Select a country</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">UK</option>
+            </select>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        <form class="credit-card">
+            <div class="form-header">
+              <h4 class="title">Credit card detail</h4>
+            </div>
+           
+            <div class="form-body">
+              <!-- Card Number -->
+             
+              <input type="password" class="card-number" placeholder="Card Number">
+           
+              <!-- Date Field -->
+              <div class="date-field">
+                <div class="month">
+                  <select name="Month">
+                    <option value="january">January</option>
+                    <option value="february">February</option>
+                    <option value="march">March</option>
+                    <option value="april">April</option>
+                    <option value="may">May</option>
+                    <option value="june">June</option>
+                    <option value="july">July</option>
+                    <option value="august">August</option>
+                    <option value="september">September</option>
+                    <option value="october">October</option>
+                    <option value="november">November</option>
+                    <option value="december">December</option>
+                  </select>
+                </div>
+                <div class="year">
+                  <select name="Year">
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                  </select>
+                </div>
+              </div>
+              <div class="card-verification">
+                <div class="cvv-input">
+                  <input type="password" placeholder="CVV">
+                </div>
+                <div class="cvv-details">
+                  <p>3 or 4 digits usually found <br> on the signature strip</p>
+                </div>
+              </div>
+              <button type="submit" class="proceed-btn"><a href="cart.html">Pay</a></button>
+        </div>
+        </form>
 
     </main>
 
