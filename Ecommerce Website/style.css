@@ -163,3 +163,107 @@ section.footerBottom p{
     color:white;
 }
 /* End of Footer Section of the Page*/
+
+/* Edits of cart page */
+main.cart-content{
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+    margin: 10px 0px;
+
+}
+section.cart-container{
+    margin: 20px;
+}
+.store-header{
+    padding: 15px 40px 15px;
+    /* Hide the default checkbox */
+    .custom-checkbox input {
+    display: none;
+    }
+
+    /* Create a custom checkbox */
+    .custom-checkbox .checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    border-color: #000000;
+    background-color: #eee;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    }
+
+
+    .custom-checkbox input:checked + .checkmark {
+    background-color: #000000;
+    }
+
+    .custom-checkbox .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    }
+
+
+    .custom-checkbox input:checked + .checkmark:after {
+    display: block;
+    }
+
+    /* Style the checkmark/indicator */
+    .custom-checkbox .checkmark:after {
+        left: 16px;
+        top: 10px;
+        width: 8px;
+        height: 15px;
+        border: solid white;
+        border-width: 0 5px 5px 0;
+        transform: rotate(45deg);
+    }
+    label {
+        font-weight: bold;
+        color: #333;
+        font-size: 30px;
+      }
+        
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
+  }
+  
+
+.cart-item-image{
+    width: 120px;
+    height: 120px;
+    margin-left: 100px;
+    overflow: hidden;
+    object-fit: cover;
+    font-size: 12px;
+}
+
+.item-details {
+    margin-left: 50px;
+    flex-grow: 1;
+  }
+  
+  .item-name {
+    margin: 30px 0 5px 0;
+  }
+  
+  .item-price {
+    margin-top: 80px;
+    font-size: 20px;
+    font-weight: 100;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #da0f0f;
+  }
+  
+  .item-quantity input {
+    width: 50px;
+    margin-left: 5px;
+  }
