@@ -1,0 +1,203 @@
+
+/* Edits of the whole webpage*/
+body{
+    margin: 0px; 
+    background-color: rgb(0, 0, 0);
+}
+
+
+/* Header section of the Page*/
+header{
+    width: 100%;
+    position: relative;
+}
+
+header nav{
+    display: flex;
+    padding: 1% 1%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(204, 0, 0, 0.979);
+}
+
+section.navBar a{
+    padding: 0px 4px;
+    color: black; 
+}
+
+/* links when clicked*/
+span.sideBarIcon:hover{
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    transition: .5s;
+}
+
+a:hover i{ 
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    transition: .5s;
+}
+
+a:visited{ 
+    text-decoration: none;
+    color:black;
+}
+a:link{
+    text-decoration: none;
+    color:black;
+}
+
+/* Side bar style and animation*/
+.sideBar{
+    height: 100%;
+    width: 0;
+    position: fixed; 
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.searchBar {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 2%;
+    margin: 0px 10px;
+}
+
+.searchBar input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5%;
+}
+
+.searchBar i{
+    color: black;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+}
+
+.sideBar h1{
+    color: white;
+}
+
+.sideBar li{
+    list-style-type: none;
+}
+.sideBar a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sideBar a:hover{
+    color: rgba(204, 0, 0, 0.979);
+}
+
+.sideBar .closebtn{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    cursor:pointer;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+span.sideBarIcon{
+    font-size:30px;
+    cursor:pointer;
+}
+
+/* Icons Styling*/
+i{
+    font-size: 30px;
+    padding: 0px 4px;
+}
+/* End of Header Section of the Page*/
+
+
+/* Main Body of the Page*/
+main.mainContent{
+    min-height: 100vh;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    margin: 10px 0px;
+}
+
+.sliderDeals{
+    font-size: 100px;
+    background-color: rgb(255, 0, 0);
+    content: 10px;
+    border-radius: 5%;
+    border-color: black;
+}
+
+/* End of Main Body of the Page*/
+
+
+/* Footer Section of the Page*/
+section.footerTop{
+    display: flex;
+    justify-content: center;
+}
+
+section.footerTop a{
+    text-decoration: none;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.85);
+    margin: 10px;
+    border-radius: 50%;
+}
+
+section.footerTop a i{
+    color:rgb(255, 255, 255);
+    font-size: 30px;
+}
+
+/* Hover Effects on Icons*/
+.footerTop a:hover i{
+    color: rgba(204, 0, 0, 0.979);
+    transition: .5s;
+}
+
+section.footerMid{
+    display: flex;
+    justify-content: center;
+}
+
+section.footerMid a{
+    justify-content: center;
+    font-size: 20px;
+    color:white;
+    padding: 10px 20px;
+    border-radius: 50%;
+}
+
+/* Hover Effects on Sections*/
+.footerMid a:hover{
+    color: rgba(204, 0, 0, 0.979);
+    transition: .5s;
+}
+section.footerBottom p{
+    text-align: center;
+    color:white;
+}
+/* End of Footer Section of the Page*/
