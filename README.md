@@ -50,4 +50,4 @@ Bishwash added connection to Home page at Logo.
 Eleo connected all href links to specified html files and checked all connections
 Eleo created User Page with Login Session
 Eleo added a form in Login Session for Username, Password, Remember me, Forgot Password, and Register
-
+Eleo changed Temporary Logo with ThreadHub logo
