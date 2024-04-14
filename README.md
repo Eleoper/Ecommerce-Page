@@ -44,4 +44,5 @@ Cameron added three items for the deals of the day
 4/13/2024 Changelog -
 Bishwash added html pages for Footer Pages: About Us, Contact Us, and Policy.
 Bishwash added connection to Footer Pages in all pages.
+Bishwash added connection to Home page at Logo.
 
