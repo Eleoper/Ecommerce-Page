@@ -14,19 +14,21 @@
                 text-align: center;
                 margin-bottom: 20px;
             }
-    
+            
+            /* About Image */
             .aboutImage {
                 max-width: 100%;
                 height: auto;
                 max-height: 400px;
             }
-    
+            
+            /* Commitment Section */
             .commitment, .joinUs {
                 font-size: 18px;
                 line-height: 1.6;
                 margin-bottom: 20px;
             }
-    
+            
             .commitmentList {
                 margin-bottom: 20px;
                 list-style-type: disc;
@@ -53,8 +55,10 @@
         </style>
 </head>
 <body>
+    <!-- Header Section -->
     <header class="header">
         <nav>
+            <!-- Side bar of header on left side -->
             <section id="mySideBar" class="sideBar">
                 <section class="searchBar">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -70,26 +74,34 @@
                     
                 </section>
             </section>
+            <!-- Logo of the header in middle -->
             <span class="sideBarIcon" onclick="openNav()">&#9776;</span>
             <section class="logo">
                 <a href="index.html"><img src="../Ecommerce Website/images/aboutLogo.png" alt="THREAD HUB" style="width: 17vh;"></a>
             </section>
+            <!-- Navigation bar on the right side of header -->
             <section class="navBar">
                 <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
                 <a href="user.html"><i class="fa-solid fa-user"></i></a>
             </section>
         </nav>
     </header>
-    
+
+    /* Adjusted margin for main content and main content of page */
     <main class="mainContent">
+        /* About Us Section */
         <section class="aboutUs">
-            <div class="aboutUsContent">
+            <section class="aboutUsContent">
                 <h2>About Us</h2>
-                <p>Welcome to <strong>ThreadHub</strong>, your premier destination for fashion-forward clothing at unbeatable prices. At ThreadHub, we're not just about selling clothes; we're about curating experiences and fostering a community of style enthusiasts. Our mission is simple: to provide high-quality, trendy clothing that reflects your unique personality and style preferences. From casual essentials to statement pieces, we've got you covered for every occasion.</p>
-                <div class="aboutImages">
+                <p>Welcome to <strong>ThreadHub</strong>, your premier destination for fashion-forward clothing at unbeatable prices. At ThreadHub, we're not just about selling clothes;
+                    we're about curating experiences and fostering a community of style enthusiasts. Our mission is simple: to provide high-quality, 
+                    trendy clothing that reflects your unique personality and style preferences. From casual essentials to statement pieces, we've got you covered for every occasion.
+                </p>
+                <icon class="aboutImages">
                     <img src="images/aboutLogo.png" alt="About Image 1" class="aboutImage">
                     <img src="images/aboutPic.jpg" alt="About Image 2" class="aboutImage">
-                </div>
+                </icon>
+                /* Commitment Section */
                 <h3>Our Commitment to You</h3>
                 <p class="commitment">At ThreadHub, customer satisfaction is our top priority. We strive to exceed your expectations with every purchase by offering:</p>
                 <ul class="commitmentList">
@@ -99,10 +111,11 @@
                     <li>Exceptional customer service</li>
                 </ul>
                 <p class="joinUs">Join us in our journey to redefine online shopping and experience the ThreadHub difference today!</p>
-            </div>
+            </section>
         </section>
     </main>
 
+    /* Footer Section*/
     <footer>
         <section class="footerTop">
             <a href="https://www.instagram.com/eleoperr/"><i class="fa-brands fa-instagram"></i></a>
