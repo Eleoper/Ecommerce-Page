@@ -10,8 +10,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <!-- Header Section -->
     <header class="header">
         <nav>
+            <!-- Side bar of header on left side -->
             <section id="mySideBar" class="sideBar">
                 <section class="searchBar">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -23,14 +25,13 @@
                     <li><a href="shorts.html">Shorts</a></li>
                     <li><a href="sweaters.html">Sweaters</a></li>
                 </ul>
-                <section>
-                    
-                </section>
             </section>
+            <!-- Logo of the header in middle -->
             <span class="sideBarIcon" onclick="openNav()">&#9776;</span>
             <section class="logo">
                 <a href="index.html"><img src="../Ecommerce Website/images/aboutLogo.png" alt="THREAD HUB" style="width: 17vh;"></a>
             </section>
+            <!-- Navigation bar on the right side of header -->
             <section class="navBar">
                 <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
                 <a href="user.html"><i class="fa-solid fa-user"></i></a>
@@ -39,33 +40,34 @@
     </header>
     
     <main id="User" class="mainContent">
-        <!-- Login Session to insert required username and passcode-->
-        <div class="loginSession">
+        <!-- Login Session -->
+        <section class="loginSession">
             <form>
                 <h1>Login</h1>
-                <div class="inputBoxUser">
+                <section class="inputBoxUser">
                     <input id="username" type="text" placeholder="Username" required autofocus>
-                </div>
-                <div class="inputBoxUser">
+                </section>
+                <section class="inputBoxUser">
                     <input id="password" type="password" placeholder="Password" required >
-                </div>
-                <div class="remember-forgot">
+                </section>
+                <section class="remember-forgot">
                     <label><input type="checkbox">Remeber Me</label>
                     <br>
                     <a class="userLinks" href="#">Forgot Password?</a>
-                </div>
+                </section>
                 <button type="submit">Login</button>
                 <br>
-                <div class="registerLink">
+                <section class="registerLink">
                     <p>
                         Don't have an account?
                         <a class="userLinks" href="#">Register</a>
                     </p>
-                </div>
+                </section>
             </form>
-        </div>
+        </section>
 	</main>
 
+    <!-- Footer Section -->
     <footer>
         <section class="footerTop">
             <a href="https://www.instagram.com/eleoperr/"><i class="fa-brands fa-instagram"></i></a>

@@ -1,5 +1,5 @@
 
-/* Edits of the whole webpage*/
+/* Edits of the body of webpage*/
 body{
     margin: 0px; 
     background-color: rgb(0, 0, 0);
@@ -32,6 +32,7 @@ span.sideBarIcon:hover{
     transition: .5s;
 }
 
+/* a animations */
 a:hover i{ 
     text-decoration: none;
     color:rgb(255, 255, 255);
@@ -116,11 +117,6 @@ a:link{
     cursor:pointer;
 }
 
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
 span.sideBarIcon{
     font-size:30px;
     cursor:pointer;
@@ -131,8 +127,6 @@ i{
     font-size: 30px;
     padding: 0px 4px;
 }
-/* End of Header Section of the Page*/
-
 
 /* Main Body of the Page*/
 main.mainContent{
@@ -149,8 +143,6 @@ main.mainContent{
     border-radius: 5%;
     border-color: black;
 }
-
-/* End of Main Body of the Page*/
 
 
 /* Footer Section of the Page*/
@@ -200,7 +192,6 @@ section.footerBottom p{
     text-align: center;
     color:white;
 }
-/* End of Footer Section of the Page*/
 
 /* Edits of cart page */
 main.cart-content{
@@ -267,13 +258,13 @@ section.cart-container{
         
 }
 
+/* Cart items and details */
 .cart-item {
     display: flex;
     align-items: center;
     border-bottom: 1px solid #ccc;
     padding: 15px 0;
-  }
-  
+}
 
 .cart-item-image{
     width: 120px;
@@ -287,26 +278,26 @@ section.cart-container{
 .item-details {
     margin-left: 50px;
     flex-grow: 1;
-  }
+}
   
-  .item-name {
-    margin: 30px 0 5px 0;
-  }
+.item-name {
+   margin: 30px 0 5px 0;
+}
   
-  .item-price {
+.item-price {
     margin-top: 80px;
     font-size: 20px;
     font-weight: 100;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #da0f0f;
-  }
+}
   
-  .item-quantity input {
+.item-quantity input {
     width: 50px;
     margin-left: 5px;
-  }
+}
 
-  input[type=text], input[type=password],select, textarea {
+input[type=text], input[type=password],select, textarea {
     width: 100%; /* Full width */
     padding: 12px; /* Some padding */  
     border: 1px solid #ccc; /* Gray border */
@@ -315,17 +306,17 @@ section.cart-container{
     margin-top: 6px; /* Add a top margin */
     margin-bottom: 16px; /* Bottom margin */
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-  }
-  input[type=submit] {
+}
+input[type=submit] {
     background-color: #04AA6D;
     color: white;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
+}
   
-  .form-container{
+.form-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px;
@@ -334,43 +325,43 @@ section.cart-container{
     background-color: #f2f2f2;
     padding: 20px;
     width: 75%;
-  }
-    /* Card Verification Field */
-    .cvv-input input {
-        float: left;
-        width: 145px;
-        padding-left: 20px;
-        border: 2px solid #e1e8ee;
-        border-radius: 6px;
-        background: #fff;
-    }
+}
+/* Card Verification Field */
+.cvv-input input {
+    float: left;
+    width: 145px;
+    padding-left: 20px;
+    border: 2px solid #e1e8ee;
+    border-radius: 6px;
+    background: #fff;
+}
     
-    .cvv-details {
-        font-size: 12px;
-        font-weight: 300;
-        line-height: 16px;
-        float: right;
-        margin-bottom: 20px;
-    }
+.cvv-details {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 16px;
+    float: right;
+    margin-bottom: 20px;
+}
     
-    .cvv-details p {
-        margin-top: 6px;
-    }
+.cvv-details p {
+    margin-top: 6px;
+}
 
-    .proceed-btn {
-        cursor: pointer;
-        font-size: 16px;
-        width: 50%;
-        border-color: transparent;
-        border-radius: 6px;
-    }
+.proceed-btn {
+    cursor: pointer;
+    font-size: 16px;
+    width: 50%;
+    border-color: transparent;
+    border-radius: 6px;
+}
      
-    .proceed-btn {
-        margin-bottom: 10px;
-        background: #04AA6D;
-    }
+.proceed-btn {
+    margin-bottom: 10px;
+    background: #04AA6D;
+}
 
-/* Start of Sidebar Sections */
+/* Sidebar Sections */
 /* Constrain images to 300x300 pixels and make them rounded */
 .roundedImage {
 	width: 300px;
@@ -392,7 +383,6 @@ section.cart-container{
 .productItem {
 	text-align: center; /* Center the text below the image */
 }
-/* End of Sidebar Items */
 
 /* Start of Deal of the Day */
 .dealOfDay {
@@ -415,6 +405,10 @@ section.cart-container{
 	height: 500px;
 	border-radius: 10px; /* Adjust the border-radius as needed for rounded corners */
 	object-fit: cover; /* Ensures the image covers the area without distorting aspect ratio */
-/*End of Deal of the Day */
+}
 
-
+/* All media styles */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

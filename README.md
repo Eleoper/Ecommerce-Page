@@ -1,7 +1,32 @@
 # Ecommerce-Page
 Project for CSCI 426 - Ecommerce Website
 
+(JUST TO DISCUSS IN MEETING)
+Eleo modifications -
+Added comments to big sections
+Changed all div elements to section
+Organized the style.css file to be more appealing and organized
+Assigned Proposals to each member - Waiting for approval of each member for meeting of Wednesday 4/23/24
+Modified README.md file for better visual representation
 
+
+(NEW DOCUMENTATION)
+Eleo Per Mapute's Modifications - 
+Created header, side bar, navigation links, and footer for each page.
+Added search bar in side bar.
+Created user page.
+
+Ngoc Bui's Modifications - 
+Created Cart page and added payment form.
+
+Cameron's Modification's - 
+Created Shirts, Shorts, and Sweaters pages.
+Populated index page with deals of the day.
+
+Bishwas Khadka's Modifications - 
+Created About Us, Contact Us, and Policy pages.
+
+(OLD DOCUMENTATION)
 4/10/2024 Notes - 
 Eleo has create the css , html, and js files for Ecommerce website
 Eleo created code for header in html
@@ -45,9 +70,3 @@ Cameron added three items for the deals of the day
 Bishwash added html pages for Footer Pages: About Us, Contact Us, and Policy.
 Bishwash added connection to Footer Pages in all pages.
 Bishwash added connection to Home page at Logo.
-
-4/13/2024 Notes - 
-Eleo connected all href links to specified html files and checked all connections
-Eleo created User Page with Login Session
-Eleo added a form in Login Session for Username, Password, Remember me, Forgot Password, and Register
-Eleo changed Temporary Logo with ThreadHub logo
