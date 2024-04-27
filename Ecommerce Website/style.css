@@ -407,6 +407,11 @@ input[type=submit] {
 	object-fit: cover; /* Ensures the image covers the area without distorting aspect ratio */
 }
 
+.loginSession{
+    justify-content: center;
+}
+
+
 /* All media styles */
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
