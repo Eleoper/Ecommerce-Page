@@ -42,27 +42,29 @@
     <!-- Login Session -->
     <section class="loginSession">
         <form>
-            <h1>Login</h1>
-            <label>Username</label>
+            <h1>Sign Up</h1>
             <section class="inputBoxUser">
                 <input id="username" type="text" placeholder="Username" required autofocus>
             </section>
-            
-            <label>Password</label>
+
+            <section class="inputBoxUser">
+                <input id="email" type="text" placeholder="Email" required pattern="[a-z0-9_%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Format - example@yahoo.com">
+            </section>
+
+            <section class="inputBoxUser">
+                <input id="birthday" type="text" placeholder="Birthdate [MM-DD-YYYY]" required pattern="[1-12]+-+[1-31]+-[1900-2100]" title="Format - MM-DD-YYYY">
+            </section>
+
             <section class="inputBoxUser">
                 <input id="password" type="password" placeholder="Password" required >
             </section>
-
-            <section class="forgot">
-                <a class="userLinks" href="#">Forgot Password?</a>
-            </section>
-            <button type="submit">Login</button>
-            <br>
-            <section class="registerLink">
+              <button type="submit">Create Account</button>
+              <br>
+              <section class="registerLink">
                 <p>
-                    Don't have an Account?
+                    Already a member?
                     <br>
-                    <a class="userLinks" href="register.html">Sign Up Now</a>
+                    <a class="userLinks" href="user.html">Log In</a>
                 </p>
             </section>
         </form>

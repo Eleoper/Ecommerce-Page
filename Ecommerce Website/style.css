@@ -119,7 +119,7 @@ a:link{
 
 span.sideBarIcon{
     font-size:30px;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 /* Icons Styling*/
@@ -128,12 +128,23 @@ i{
     padding: 0px 4px;
 }
 
-/* Main Body of the Page*/
+/* Main Body of the Pages*/
 main.mainContent{
     min-height: 100vh;
     text-align: center;
+    align-items: center;
     background-color: rgb(255, 255, 255);
     margin: 10px 0px;
+}
+
+/* User Login Box */
+.loginSession{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    min-height : 50vh;
+    background-color: #ffffff;
 }
 
 .sliderDeals{

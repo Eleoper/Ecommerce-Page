@@ -26,6 +26,16 @@ Populated index page with deals of the day.
 Bishwas Khadka's Modifications - 
 Created About Us, Contact Us, and Policy pages.
 
+WCAG - 
+-"THREADHUB" logo is a clickable link to easily go back to the home page.
+-Login icon is easily accessible in the header to log in.
+-Cart is easily accessible in the header to check out faster.
+-Side bar was created to give focus on the 3 topics sold on the website as well as the search bar to easily search things.
+-Icons of social media pages at the bottom to easily access our social media platforms.
+-About Us, Policies, and Contact Us forms are easily accessible to click to check them out.
+-Description of item is easily read when you hover over item picture.
+
+
 (OLD DOCUMENTATION)
 4/10/2024 Notes - 
 Eleo has create the css , html, and js files for Ecommerce website
