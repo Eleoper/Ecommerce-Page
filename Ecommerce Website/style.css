@@ -119,7 +119,7 @@ a:link{
 
 span.sideBarIcon{
     font-size:30px;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 /* Icons Styling*/
@@ -128,17 +128,31 @@ i{
     padding: 0px 4px;
 }
 
-/* Main Body of the Page*/
+/* Main Body of the Pages*/
 main.mainContent{
+ HoverDetailsDisplay
     display: flex; /* Enables flexbox layout */
+  =======
+}main{
     min-height: 100vh;
 	justify-content: center; /* Centers items horizontally */
     text-align: center;
+    align-items: center;
     background-color: rgb(255, 255, 255);
     margin: 10px 0px;
 	align-items: stretch; /* Ensures that the items fill the container vertically */
     padding: 20px; /* Adds padding around the items */
     box-sizing: border-box; /* Ensures padding is included in width calculation */
+}
+
+/* User Login Box */
+.loginSession{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    min-height : 50vh;
+    background-color: #ffffff;
 }
 
 .sliderDeals{
@@ -422,6 +436,11 @@ input[type=submit] {
     object-fit: cover; /* Ensures the image covers the area without stretching */
     aspect-ratio: 1 / 1; /* Keeps width and height the same */
 }
+
+.loginSession{
+    justify-content: center;
+}
+
 
 /* All media styles */
 @media screen and (max-height: 450px) {

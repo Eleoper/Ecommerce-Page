@@ -1,3 +1,12 @@
+<!-- PHP Session for when user is logged in -->
+<?php
+    session_start();
+    //validates connection
+    include("php/config.php");
+    if(!isset($_SESSION['valid'])){
+        header("Location: user.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,48 +47,46 @@
             </section>
         </nav>
     </header>
-    
+
+    <!-- User Settings Section -->
     <main class="mainContent">
+        <!-- Php Section -->
+        <?php 
 
-    <!-- Deal of the Day Banner -->
-    <section class="dealOfDay">
-        <h2>DEALS OF THE DAY</h2>
-    </section>
+            $id = $_SESSION['id'];
+            $query = mysqli_query($con,"SELECT * FROM users WHERE Id=$id");
 
-    <!-- Featured Products -->
-	<section class="featuredProducts">
-        <section class="item-container">
-            <article class="item" data-name="Double Heart Shirt" data-owner="Alice Johnson" data-price="$20">
-                <img src="images/dealofday/heartshirt.jpg" alt="Double Heart Shirt" class="roundedImageLarge">
-                <aside class="details">
-                    <strong>Name:</strong> <span class="name">Double Heart Shirt</span><br>
-                    <strong>Owner:</strong> <span class="owner">Alice Johnson</span><br>
-                    <strong>Price:</strong> <span class="price"><b>$20</b> <s>$40</s></span>
-                </aside>
-            </article>
+            while($result = mysqli_fetch_assoc($query)){
+                $res_Uname = $result['Username'];
+                $res_Email = $result['Email'];
+                $res_Id = $result['Id'];
+                $res_Birthdate = $result['Birthdate'];
+            }
+
+        ?>
+        <section>
+            <!-- Welcome Box -->
+            <div class="box">
+                <a href="php/logout.php">Hello <strong><?php echo $res_Uname ?></strong>, Welcome. Click to Log out.</a>
+            </div>
+            <!-- Id Box -->
+            <div class="box">
+                <p> ID : <strong><?php echo $res_Id ?></strong></p>
+            </div>
+            <!-- Birthdate Box -->
+            <div class="box">
+                <p> Birthdate : <strong><?php echo $res_Birthdate ?></strong></p>
+            </div>
+            <!-- Email Box -->
+            <div class="box">
+                <p>Email : <strong><?php echo $res_Email ?></strong></p>
+            </div>
+            <!-- Change Profile -->
+            <div class="box">
+                <a href="edit.php"><strong>Change Profile</strong></p>
+            </div>
         </section>
-        <section class="item-container">
-            <article class="item" data-name="Green Wool Shorts" data-owner="Bob Smith" data-price="$50">
-                <img src="images/dealofday/woolshorts.jpg" alt="Green Wool Shorts" class="roundedImageLarge">
-                <aside class="details">
-                    <strong>Name:</strong> <span class="name">Green Wool Shorts</span><br>
-                    <strong>Owner:</strong> <span class="owner">Bob Smith</span><br>
-                    <strong>Price:</strong> <span class="price"><b>$50</b> <s>$70</s></span>
-                </aside>
-            </article>
-        </section>
-        <section class="item-container">
-            <article class="item" data-name="Cotton Crewneck Sweater" data-owner="Carol White" data-price="$80">
-                <img src="images/dealofday/sweater.jpg" alt="Cotton Crewneck Sweater" class="roundedImageLarge">
-                <aside class="details">
-                    <strong>Name:</strong> <span class="name">Cotton Crewneck Sweater</span><br>
-                    <strong>Owner:</strong> <span class="owner">Carol White</span><br>
-                    <strong>Price:</strong> <span class="price"><b>$80</b> <s>$130</s></span>
-                </aside>
-            </article>
-        </section>
-    </section>
-	</main>
+    </main>
 
     <!-- Footer Section -->
     <footer>
