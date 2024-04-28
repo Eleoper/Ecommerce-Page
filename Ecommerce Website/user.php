@@ -1,3 +1,7 @@
+<?php
+    //Start session to save user data
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +42,39 @@
             </section>
         </nav>
     </header>
-    
+    <!-- PHP Section -->
+    <?php
+        //Verify Connection
+        include("php/config.php");
+
+        //Check username and password
+        if(isset($_POST['submit'])){
+            $email = mysqli_real_escape_string($con,$_POST['email']);
+            $password = mysqli_real_escape_string($con,$_POST['password']);
+
+            $result = mysqli_query($con,"SELECT * FROM users WHERE Email='$email' AND Password='$password'") or die("Select Error");
+            $row = mysqli_fetch_assoc($result);
+
+            //if username & password found, assign data for userhome
+            if(is_array($row) && !empty($row)){
+                $_SESSION['valid'] = $row['Email'];
+                $_SESSION['username'] = $row['Username'];
+                $_SESSION['birthdate'] = $row['Birthdate'];
+                $_SESSION['id'] = $row['Id'];
+            }
+            //no row found, gives error
+            else{
+                echo "<div class='box-check'>
+                        <p>Wrong Username or Password</p>
+                        <a href='user.php'><button> Go Back</button>
+                    </div> <br>; ";
+            }
+            if(isset($_SESSION['valid'])){
+                header("Location: userhome.php");
+            }
+
+        }else{
+    ?>
     <!-- Login Session -->
     <section class="loginSession">
         <form>
@@ -67,7 +103,7 @@
             </section>
         </form>
     </section>
-
+    <?php } ?>
     <!-- Footer Section -->
     <footer>
         <section class="footerTop">
