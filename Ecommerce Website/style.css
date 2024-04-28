@@ -130,11 +130,19 @@ i{
 
 /* Main Body of the Pages*/
 main.mainContent{
+ HoverDetailsDisplay
+    display: flex; /* Enables flexbox layout */
+  =======
+}main{
     min-height: 100vh;
+	justify-content: center; /* Centers items horizontally */
     text-align: center;
     align-items: center;
     background-color: rgb(255, 255, 255);
     margin: 10px 0px;
+	align-items: stretch; /* Ensures that the items fill the container vertically */
+    padding: 20px; /* Adds padding around the items */
+    box-sizing: border-box; /* Ensures padding is included in width calculation */
 }
 
 /* User Login Box */
@@ -406,16 +414,27 @@ input[type=submit] {
 }
 
 .featuredProducts {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
+    display: grid; /* Using grid to layout items */
+    grid-template-columns: repeat(3, 1fr); /* Creates three columns with equal width */
+    gap: 20px; /* Space between grid items */
+    width: 100%; /* Grid container takes full width of its container */
+    align-items: stretch; /* Stretches items to fill the container height */
+}
+
+.item {
+    display: flex; /* Flexbox for further alignment of content inside each item */
+    flex-direction: column; /* Stacks item content vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    width: 100%; /* Full width of the container */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds visual depth */
 }
 
 .roundedImageLarge {
-	width: 500px;
-	height: 500px;
-	border-radius: 10px; /* Adjust the border-radius as needed for rounded corners */
-	object-fit: cover; /* Ensures the image covers the area without distorting aspect ratio */
+    width: 100%; /* Full width of the item */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+    aspect-ratio: 1 / 1; /* Keeps width and height the same */
 }
 
 .loginSession{
@@ -428,3 +447,44 @@ input[type=submit] {
     .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+article.item {
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    position: relative;
+    display: block;
+}
+
+article.item:hover {
+    transform: scale(1.05);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+aside.details {
+    display: none; /* Hide details by default, shown on hover */
+    background-color: rgba(255,255,255,0.9);
+    color: #333;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+article.item:hover .details {
+    display: block; /* Show details on hover */
+}
+
