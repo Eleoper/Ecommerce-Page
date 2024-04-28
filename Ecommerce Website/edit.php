@@ -1,3 +1,12 @@
+<!-- PHP Session for when user is logged in -->
+<?php
+    session_start();
+    //validates connection
+    include("php/config.php");
+    if(!isset($_SESSION['valid'])){
+        header("Location: user.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,36 +47,67 @@
             </section>
         </nav>
     </header>
-    
-    <!-- Login Session -->
+
+    <!-- Change User Profile-->
     <section class="loginSession">
-        <form>
-            <h1>Sign Up</h1>
+        <?php
+            //Updates changes to database from given input
+            if(isset($_POST['submit'])){
+                $username = $_POST['username'];
+                $email = $_POST['email'];
+                $birthdate = $_POST['birthdate'];
+                $password = $_POST['password'];
+
+                $id = $_SESSION['id'];
+                
+                $edit_query = mysqli_query($con,"UPDATE users SET Username='$username', Email='$email',
+                    Birthdate='$birthdate', Password='$password' WHERE Id=$id") or die("Error Occured");
+
+                if($edit_query){
+                    echo "<div class='box-check'>
+                    <p>Account Updated!</p>
+                    <a href='userhome.php'><button class='btn'> Go Back</button>
+                    </div> <br>";
+                }
+            }
+            else{
+                //Session Variable will remain same if submit is not clicked
+                $id = $_SESSION['id'];
+                $query = mysqli_query($con,"SELECT * FROM users WHERE Id=$id");
+                
+                while($result = mysqli_fetch_assoc($query)){
+                    $res_Uname = $result['Username'];
+                    $res_Email = $result['Email'];
+                    $res_Birthdate = $result['Birthdate'];
+                    $res_Password = $result['Password'];
+                }
+        ?>
+        <form action="" method="post">
+            <h1>Change Profile</h1>
             <section class="inputBoxUser">
-                <input id="username" type="text" placeholder="Username" required autofocus>
+                <input id="username" name="username" type="text" value=<?php echo $res_Uname?> autofocus>
             </section>
 
             <section class="inputBoxUser">
-                <input id="email" type="text" placeholder="Email" required pattern="[a-z0-9_%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Format - example@yahoo.com">
+                <input id="email" name="email" type="text" value=<?php echo $res_Email?> 
+                pattern="[a-z0-9_%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Format - example@yahoo.com">
             </section>
 
             <section class="inputBoxUser">
-                <input id="birthday" type="text" placeholder="Birthdate [MM-DD-YYYY]" required pattern="[1-12]+-+[1-31]+-[1900-2100]" title="Format - MM-DD-YYYY">
+                <input id="birthdate" name="birthdate" type="text" 
+                pattern="(3[01]|[12][0-9]|0?[1-9])(-)(1[0-2]|0?[1-9])\2([0-9]{2})?[0-9]{2}$" 
+                value=<?php echo $res_Birthdate?> title="Format - MM-DD-YYYY">
             </section>
 
             <section class="inputBoxUser">
-                <input id="password" type="password" placeholder="Password" required >
+                <input id="password" name="password" type="password" placeholder="Password">
             </section>
-              <button type="submit">Create Account</button>
+              <button type="submit" name="submit" class="btn" value="Create Account">Change</button>
               <br>
-              <section class="registerLink">
-                <p>
-                    Already a member?
-                    <br>
-                    <a class="userLinks" href="user.html">Log In</a>
-                </p>
+              <br>
             </section>
         </form>
+        <?php } ?>
     </section>
 
     <!-- Footer Section -->

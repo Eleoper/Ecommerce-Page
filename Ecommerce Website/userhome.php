@@ -1,3 +1,12 @@
+<!-- PHP Session for when user is logged in -->
+<?php
+    session_start();
+    //validates connection
+    include("php/config.php");
+    if(!isset($_SESSION['valid'])){
+        header("Location: user.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,36 +47,46 @@
             </section>
         </nav>
     </header>
-    
+
+    <!-- User Settings Section -->
     <main class="mainContent">
+        <!-- Php Section -->
+        <?php 
 
-    <!-- Deal of the Day Banner -->
-    <section class="dealOfDay">
-        <h2>DEALS OF THE DAY</h2>
-    </section>
+            $id = $_SESSION['id'];
+            $query = mysqli_query($con,"SELECT * FROM users WHERE Id=$id");
 
-    <!-- Featured Products -->
-    <section class="featuredProducts">
-        <section class="productItem">
-            <img src="images/dealofday/heartshirt.jpg" alt="Shirt Deal" class="roundedImageLarge">
-            <p>Double Heart Shirt</p>
-			<p class="itemPrice"><b>$19.99</b></p>
-            <p class="itemPrice"><s>$39.99</s></p>
+            while($result = mysqli_fetch_assoc($query)){
+                $res_Uname = $result['Username'];
+                $res_Email = $result['Email'];
+                $res_Id = $result['Id'];
+                $res_Birthdate = $result['Birthdate'];
+            }
+
+        ?>
+        <section>
+            <!-- Welcome Box -->
+            <div class="box">
+                <a href="php/logout.php">Hello <strong><?php echo $res_Uname ?></strong>, Welcome. Click to Log out.</a>
+            </div>
+            <!-- Id Box -->
+            <div class="box">
+                <p> ID : <strong><?php echo $res_Id ?></strong></p>
+            </div>
+            <!-- Birthdate Box -->
+            <div class="box">
+                <p> Birthdate : <strong><?php echo $res_Birthdate ?></strong></p>
+            </div>
+            <!-- Email Box -->
+            <div class="box">
+                <p>Email : <strong><?php echo $res_Email ?></strong></p>
+            </div>
+            <!-- Change Profile -->
+            <div class="box">
+                <a href="edit.php"><strong>Change Profile</strong></p>
+            </div>
         </section>
-        <section class="productItem">
-            <img src="images/dealofday/woolshorts.jpg" alt="Shorts Deal" class="roundedImageLarge">
-            <p>Green Wool Shorts</p>
-            <p class="itemPrice"><b>$49.99</b></p>
-            <p class="itemPrice"><s>$69.99</s></p>
-        </section>
-        <section class="productItem">
-            <img src="images/dealofday/sweater.jpg" alt="Sweater Deal" class="roundedImageLarge">
-            <p>Cotton Crewneck Sweater </p>
-            <p class="itemPrice"><b>$79.99</b></p>
-            <p class="itemPrice"><s>$129.99</s></p>
-        </section>
-    </section>
-	</main>
+    </main>
 
     <!-- Footer Section -->
     <footer>
