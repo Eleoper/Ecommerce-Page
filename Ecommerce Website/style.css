@@ -378,12 +378,84 @@ input[type=submit] {
 /* Grid layout for products */
 .productDisplay {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr); /* Creates two columns */
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Space between grid items */
 	grid-gap: 20px; /* Space between the grid items */
 	padding: 20px; /* Padding around the grid */
 	justify-items: center; /* Center the items horizontally */
 	align-items: center; /* Center the items vertically */
 }
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .productDisplay {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid columns for smaller screens */
+    }
+
+    .item-container {
+        padding: 10px;
+    }
+
+    .details, .star-rating label {
+        font-size: 20px; /* Smaller font size for smaller devices */
+    }
+}
+
+@media (max-width: 480px) {
+    header nav {
+        flex-direction: column; /* Stack nav items vertically on very small screens */
+    }
+
+    .searchBar, .sideBar a, .footerTop a i, .footerMid a {
+        font-size: smaller; /* Smaller font sizes for readability on small devices */
+    }
+}
+
+.featuredProducts {
+    display: grid;
+    /* Set minimum width of each grid item to 270px, allowing them to grow as needed */
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 20px; /* Space between items */
+    padding: 20px; /* Padding around the grid */
+    align-items: stretch; /* Ensures that items stretch to fill the grid cell vertically */
+}
+
+.featuredProducts .item {
+    display: flex; /* Ensures flexbox layout */
+    flex-direction: column; /* Stacks children elements vertically */
+    align-items: center; /* Centers items horizontally */
+    text-align: center; /* Aligns text centrally */
+    padding: 10px; /* Padding inside each item */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds depth with shadow */
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for readability */
+    border-radius: 8px; /* Optional rounded corners */
+    margin: auto; /* Helps in centering the item if it's smaller than the grid column */
+    max-width: 100%; /* Ensures item does not overflow its container */
+}
+
+/* Responsive adjustments with Media Queries for finer control over layout and font sizes */
+@media (max-width: 1024px) {
+    .featuredProducts .details {
+        font-size: calc(12px + 0.4vw); /* Adjusts font size dynamically based on viewport width */
+    }
+}
+
+@media (max-width: 768px) {
+    .featuredProducts .details {
+        font-size: calc(12px + 0.8vw); /* Larger font size increase per viewport width unit on smaller devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .featuredProducts .details {
+        font-size: 14px; /* Fixed font size for very small devices */
+    }
+    .featuredProducts {
+        grid-template-columns: 1fr; /* Single column layout on very small screens */
+    }
+}
+
+
 
 .productItem {
 	text-align: center; /* Center the text below the image */
@@ -399,12 +471,12 @@ input[type=submit] {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.featuredProducts {
-    display: grid; /* Using grid to layout items */
-    grid-template-columns: repeat(3, 1fr); /* Creates three columns with equal width */
-    gap: 20px; /* Space between grid items */
-    width: 100%; /* Grid container takes full width of its container */
-    align-items: stretch; /* Stretches items to fill the container height */
+/* .featuredProducts { */
+    /* display: grid; /* Using grid to layout items */ */
+    /* grid-template-columns: repeat(3, 1fr); /* Creates three columns with equal width */ */
+    /* gap: 20px; /* Space between grid items */ */
+    /* width: 100%; /* Grid container takes full width of its container */ */
+    /* align-items: stretch; /* Stretches items to fill the container height */ */
 }
 
 .item {
@@ -528,12 +600,25 @@ article.item:hover .details {
 }
 
 .star-rating {
-    display: inline-flex;
-    flex-direction: row-reverse; /* Reverse the order to simplify hover highlighting */
-    justify-content: center; /* Center stars horizontally */
-    align-items: center; /* Center stars vertically */
-    width: 100%; /* Ensure the container takes the full width of its parent */
-    padding: 5px; /* Provide some padding around the stars */
+    border: none; /* Removes the default border from the fieldset */
+    display: flex;
+    justify-content: center; /* Center-aligns the star ratings */
+    width: 100%; /* Ensures the star rating takes up the full width */
+    margin-top: 10px; /* Adds spacing above the star rating for clarity */
+    padding: 5px; /* Adds internal padding for visual spacing */
+}
+
+/* If the legend still needs styling */
+.star-rating legend {
+    font-size: 16px; /* Adjust the font size as needed */
+    color: #333; /* Sets the color of the legend text */
+    padding: 0; /* Removes any default padding */
+    margin-bottom: 5px; /* Adds a small space below the legend */
+}
+
+/* Further ensure no outlines or unwanted styles */
+.star-rating:focus-within {
+    outline: none; /* Removes focus outline if clicked inside */
 }
 
 .star-rating input[type="radio"] {
