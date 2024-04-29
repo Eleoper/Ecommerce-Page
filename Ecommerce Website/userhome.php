@@ -43,7 +43,7 @@
             <!-- Navigation bar on the right side of header -->
             <section class="navBar">
                 <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                <a href="user.php"><i class="fa-solid fa-user"></i></a>
+                <a href="userhome.php"><i class="fa-solid fa-user"></i></a>
             </section>
         </nav>
     </header>
