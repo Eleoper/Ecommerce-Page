@@ -130,10 +130,10 @@ i{
 
 /* Main Body of the Pages*/
 main.mainContent{
- HoverDetailsDisplay
     display: flex; /* Enables flexbox layout */
-  =======
-}main{
+}
+
+main{
     min-height: 100vh;
 	justify-content: center; /* Centers items horizontally */
     text-align: center;
@@ -437,10 +437,6 @@ input[type=submit] {
     aspect-ratio: 1 / 1; /* Keeps width and height the same */
 }
 
-.loginSession{
-    justify-content: center;
-}
-
 
 /* All media styles */
 @media screen and (max-height: 450px) {
@@ -448,6 +444,49 @@ input[type=submit] {
   .sidenav a {font-size: 18px;}
 }
 
+/* Box for user settings */
+div.box{
+    padding-top: 5%;
+    margin: .2% 10%;
+    border-style: solid;
+    background-color: #ff7272;
+    justify-content: center;
+    text-align: center;
+    width: 75%;
+}
+
+/* User Login Box */
+.loginSession{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    min-height : 50vh;
+    background-color: #ffffff;
+}
+
+/* User Setting Boxes */
+div.box a{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Boxes for signingup */
+div.box-check{
+    padding-top: 5%;
+    margin: .2% 10%;
+    border-style: solid;
+    background-color: #ffffff;
+    justify-content: center;
+    text-align: center;
+    width: 75%;
+    color:red;
+}
+
+div.box-check p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Item Boxes Styles */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
