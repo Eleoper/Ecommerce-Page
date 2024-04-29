@@ -1,15 +1,13 @@
-
 <?php
-$fname = $_POST['fname'];
-$lname = $_POST['lname'];
-$adress = $_POST['address'];
-$zip = $_POST['zip'];
-$country = $_POST['country'];
+$cardnum = $_POST['cart-number'];
+$cvv = $_POST['cvv'];
+$month = $_POST['month'];
+$year = $_POST['year'];
 
 
 if($_POST){
-	if (!$fname || !$adress || !$zip || !$country) {
-		//check for customer info, if empty echo the page with error message
+	if (!$cardnum || !$cvv || !$month || !$year) {
+		//check for empty information, if empty, echo the page with error message
 		 echo'
          <!DOCTYPE html>
          <html lang="en">
@@ -52,7 +50,7 @@ if($_POST){
                  </nav>
              </header>
              <main class="cart-content">
-             <h2>Your message was not sent due to empty information.<br />
+             <h2>Your payment was not sent due to empty information.<br />
             Please try again. Thank you!</h2>
             <p>Go back to the <a href="index.html"><i>homepage.</i></a></p>
             </main>
@@ -74,11 +72,11 @@ if($_POST){
         </body>
         </html>';
 	}
-	else{//if good, create database in local host and echo thank you message
+	else{//if good, create database on local host, and echo the thank you message
         $host = "localhost";
         $username= "cartDB";
         $password = "";
-        $dbname = "cartDB";
+        $dbname = "payDB";
 
         //CREAT DB connection
         $conn = new mysqli($host, $username, $password, $dbname);
@@ -89,7 +87,7 @@ if($_POST){
         }
 
         //create a data entry query
-        $sql = "INSERT INTO cartform (id, fname, lname, adress, zip, country) VALUES ('0', '$fname', '$lname', '$adress', '$zip', '$country')";
+        $sql = "INSERT INTO payform (id, cardnumber, cvv, mon, yea) VALUES ('0', '$cardnum', '$cvv', '$month', '$year')";
 
         //send query to database
         $rs = mysqli_query($con, $sql);
@@ -140,7 +138,7 @@ if($_POST){
                      </nav>
                  </header>
                  <main class="cart-content">
-                 <h2>Your message was sent. We will contact you soon.<br />
+                 <h2>Your payment was sent. We will contact you soon.<br />
                 Thank you!</h2>
                 <p>Go back to the <a href="index.html"><i>homepage.</i></a></p>
                 </main>

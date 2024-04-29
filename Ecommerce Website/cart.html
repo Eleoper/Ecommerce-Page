@@ -188,7 +188,7 @@
             <br>
             <input type="submit" value="Submit">
         </form>
-        <form class="credit-card">
+        <form class="credit-card" method="post" action="pay.php">
             <section class="form-header">
               <h4 class="title">Credit card detail</h4>
             </section>
@@ -196,7 +196,7 @@
             <section class="form-body">
               <!-- Card Number -->
              
-              <input type="password" class="card-number" placeholder="Card Number">
+              <input type="password" class="card-number" placeholder="Card Number" id="card-number">
            
               <!-- Date Field -->
               <section class="date-field">
@@ -232,7 +232,7 @@
               </section>
               <section class="card-verification">
                 <section class="cvv-input">
-                  <input type="password" placeholder="CVV">
+                  <input type="password" placeholder="CVV" id="cvv">
                 </section>
                 <section class="cvv-details">
                   <p>3 or 4 digits usually found <br> on the signature strip</p>
