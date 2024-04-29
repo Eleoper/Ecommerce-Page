@@ -259,8 +259,66 @@ section.cart-container{
         font-weight: bold;
         color: #333;
         font-size: 30px;
-      }
+    }
         
+}
+/*media screen for cart page store header*/
+@media only screen and (max-width: 600px) {
+    .store-header{
+        padding: 10px 20px 10px;
+        /* Hide the default checkbox */
+        .custom-checkbox input {
+        display: none;
+        }
+    
+        /* Create a custom checkbox */
+        .custom-checkbox .checkmark {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 30px;
+        width: 30px;
+        border-color: #000000;
+        background-color: #eee;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 8px;
+        }
+    
+    
+        .custom-checkbox input:checked + .checkmark {
+        background-color: #000000;
+        }
+    
+        .custom-checkbox .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+        }
+    
+    
+        .custom-checkbox input:checked + .checkmark:after {
+        display: block;
+        }
+    
+        /* Style the checkmark/indicator */
+        .custom-checkbox .checkmark:after {
+            left: 10px;
+            top: 5px;
+            width: 8px;
+            height: 15px;
+            border: solid white;
+            border-width: 0 5px 5px 0;
+            transform: rotate(45deg);
+        }
+        label {
+            font-weight: bold;
+            color: #333;
+            font-size: 20px;
+        }
+            
+    }
+    
 }
 
 /* Cart items and details */
@@ -272,12 +330,35 @@ section.cart-container{
 }
 
 .cart-item-image{
-    width: 120px;
+    width: 200px;
     height: 120px;
     margin-left: 100px;
     overflow: hidden;
     object-fit: cover;
     font-size: 12px;
+}
+/* add media screen for images*/
+@media only screen and (max-width: 600px) {
+    .cart-item {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+        padding: 15px 0;
+    }
+    .cart-item-image {
+        width: 600px;
+        height: 120px;
+        margin-left: 80px;
+        overflow: hidden;
+        object-fit:cover;
+        font-size: 12px;
+    }
+    .item-details {
+        margin-left: 15px;
+        margin-right: 10px;
+        flex-grow: 1;
+    }
+    
 }
 
 .item-details {
@@ -298,14 +379,15 @@ section.cart-container{
 }
   
 .item-quantity input {
-    width: 50px;
+    width: 80px;
     margin-left: 5px;
+    
 }
 
 input[type=text], input[type=password],select, textarea {
     width: 100%; /* Full width */
-    padding: 12px; /* Some padding */  
-    border: 1px solid #ccc; /* Gray border */
+    padding: 15px; /* Some padding */  
+    border: 2px solid #ccc; /* Gray border */
     border-radius: 4px; /* Rounded borders */
     box-sizing: border-box; /* Make sure that padding and width stays in place */
     margin-top: 6px; /* Add a top margin */
