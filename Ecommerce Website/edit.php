@@ -43,7 +43,7 @@
             <!-- Navigation bar on the right side of header -->
             <section class="navBar">
                 <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                <a href="user.php"><i class="fa-solid fa-user"></i></a>
+                <a href="userhome.php"><i class="fa-solid fa-user"></i></a>
             </section>
         </nav>
     </header>
@@ -56,7 +56,6 @@
                 $username = $_POST['username'];
                 $email = $_POST['email'];
                 $birthdate = $_POST['birthdate'];
-                $password = $_POST['password'];
 
                 $id = $_SESSION['id'];
                 
@@ -79,7 +78,6 @@
                     $res_Uname = $result['Username'];
                     $res_Email = $result['Email'];
                     $res_Birthdate = $result['Birthdate'];
-                    $res_Password = $result['Password'];
                 }
         ?>
         <form action="" method="post">
@@ -99,12 +97,8 @@
                 value=<?php echo $res_Birthdate?> title="Format - MM-DD-YYYY">
             </section>
 
-            <section class="inputBoxUser">
-                <input id="password" name="password" type="password" placeholder="Password">
-            </section>
-              <button type="submit" name="submit" class="btn" value="Create Account">Change</button>
-              <br>
-              <br>
+            <button type="submit" name="submit" class="btn" value="Create Account">Change</button>
+            <br><br>
             </section>
         </form>
         <?php } ?>
