@@ -40,53 +40,86 @@
     </header>
 
     <!-- Body - Shirts Section -->
-    <main class="mainContent">
-        <section class="productDisplay">
-			<section class="item-container">
-				<article class="item" data-name="Long Sleeve B&W Cotton Shirt" data-owner="John Doe" data-price="$50.00">
-					<img src="images/shirts/LongSleeve.jpg" alt="B&W LongSleeve">
-					<aside class="details">
-						<strong>Name:</strong> <span class="name">Long Sleeve B&W Cotton Shirt</span><br>
-						<strong>Owner:</strong> <span class="owner">John Doe</span><br>
-						<strong>Price:</strong> <span class="price">$50.00</span>
-					</aside>
-				</article>
-			</section>
-
-			<section class="item-container">
-				<article class="item" data-name="Button-Up Multi-Colored Shirt" data-owner="Mark Davis" data-price="$25.00">
-					<img src="images/shirts/ButtonUp.jpg" alt="ButtonUp">
-					<aside class="details">
-						<strong>Name:</strong> <span class="name">Button-Up Multi-Colored Shirt</span><br>
-						<strong>Owner:</strong> <span class="owner">Mark Davis</span><br>
-						<strong>Price:</strong> <span class="price">$25.00</span>
-					</aside>
-				</article>
-			</section>
-			
-			<section class="item-container">
-				<article class="item" data-name="Polo Shirt" data-owner="Grant Hughes" data-price="$20.00">
-					<img src="images/shirts/GreyPolo.jpg" alt="Polo Shirt">
-					<aside class="details">
-						<strong>Name:</strong> <span class="name">Unisex Grey Polo Shirt</span><br>
-						<strong>Owner:</strong> <span class="owner">Grant Hughes</span><br>
-						<strong>Price:</strong> <span class="price">$20.00</span>
-					</aside>
-				</article>
-			</section>
-			
-			<section class="item-container">
-				<article class="item" data-name="ChameleonTee" data-owner="Steve Jobless" data-price="$15.00">
-					<img src="images/shirts/ChameleonTee.jpg" alt="Shirt 4">
-					<aside class="details">
-						<strong>Name:</strong> <span class="name">Chameleon Tee</span><br>
-						<strong>Owner:</strong> <span class="owner">Steve Jobless</span><br>
-						<strong>Price:</strong> <span class="price">$15.00</span>
-					</aside>
-				</article>
-			</section>
+<main class="mainContent">
+    <section class="productDisplay">
+        <section class="item-container">
+            <article class="item" data-name="Long Sleeve B&W Cotton Shirt" data-owner="John Doe" data-price="$50.00">
+                <img src="images/shirts/LongSleeve.jpg" alt="B&W LongSleeve">
+                <aside class="details">
+                    <strong>Name:</strong> <span class="name">Long Sleeve B&W Cotton Shirt</span><br>
+                    <strong>Owner:</strong> <span class="owner">John Doe</span><br>
+                    <strong>Price:</strong> <span class="price">$50.00</span>
+                    <fieldset class="star-rating">
+                        <legend>Rate this product:</legend>
+                        <input type="radio" id="star1-longsleeve" name="rating-longsleeve" value="1"><label for="star1-longsleeve" title="1 star">☆</label>
+                        <input type="radio" id="star2-longsleeve" name="rating-longsleeve" value="2"><label for="star2-longsleeve" title="2 stars">☆</label>
+                        <input type="radio" id="star3-longsleeve" name="rating-longsleeve" value="3"><label for="star3-longsleeve" title="3 stars">☆</label>
+                        <input type="radio" id="star4-longsleeve" name="rating-longsleeve" value="4"><label for="star4-longsleeve" title="4 stars">☆</label>
+                        <input type="radio" id="star5-longsleeve" name="rating-longsleeve" value="5"><label for="star5-longsleeve" title="5 stars">☆</label>
+                    </fieldset>
+                </aside>
+            </article>
         </section>
-    </main>
+
+        <section class="item-container">
+            <article class="item" data-name="Button-Up Multi-Colored Shirt" data-owner="Mark Davis" data-price="$25.00">
+				<img src="images/shirts/ButtonUp.jpg" alt="ButtonUp">
+                <aside class="details">
+                    <strong>Name:</strong> <span class="name">Button-Up Multi-Colored Shirt</span><br>
+                    <strong>Owner:</strong> <span the="owner">Mark Davis</span><br>
+                    <strong>Price:</strong> <span class="price">$25.00</span>
+					<fieldset class="star-rating">
+						<legend>Rate this product:</legend>
+						<input type="radio" id="star1-buttonup" name="rating-buttonup" value="1"><label for="star1-buttonup" title="1 star">☆</label>
+						<input type="radio" id="star2-buttonup" name="rating-buttonup" value="2"><label for="star2-buttonup" title="2 stars">☆</label>
+						<input type="radio" id="star3-buttonup" name="rating-buttonup" value="3"><label for="star3-buttonup" title="3 stars">☆</label>
+						<input type="radio" id="star4-buttonup" name="rating-buttonup" value="4"><label for="star4-buttonup" title="4 stars">☆</label>
+						<input type="radio" id="star5-buttonup" name="rating-buttonup" value="5"><label for="star5-buttonup" title="5 stars">☆</label>
+					</fieldset>
+				</aside>
+            </article>
+        </section>
+
+        <section class="item-container">
+            <article class="item" data-name="Polo Shirt" data-owner="Grant Hughes" data-price="$20.00">
+                <img src="images/shirts/GreyPolo.jpg" alt="Polo Shirt">
+                <aside class="details">
+                    <strong>Name:</strong> <span class="name">Unisex Grey Polo Shirt</span><br>
+                    <strong>Owner:</strong> <span class="owner">Grant Hughes</span><br>
+                    <strong>Price:</strong> <span class="price">$20.00</span>
+					<fieldset class="star-rating">
+						<legend>Rate this product:</legend>
+						<input type="radio" id="star1-poloshirt" name="rating-poloshirt" value="1"><label for="star1-poloshirt" title="1 star">☆</label>
+						<input type="radio" id="star2-poloshirt" name="rating-poloshirt" value="2"><label for="star2-poloshirt" title="2 stars">☆</label>
+						<input type="radio" id="star3-poloshirt" name="rating-poloshirt" value="3"><label for="star3-poloshirt" title="3 stars">☆</label>
+						<input type="radio" id="star4-poloshirt" name="rating-poloshirt" value="4"><label for="star4-poloshirt" title="4 stars">☆</label>
+						<input type="radio" id="star5-poloshirt" name="rating-poloshirt" value="5"><label for="star5-poloshirt" title="5 stars">☆</label>
+					</fieldset>
+				</aside>
+            </article>
+        </section>
+
+        <section class="item-container">
+            <article class="item" data-name="ChameleonTee" data-owner="Steve Jobless" data-price="$15.00">
+                <img src="images/shirts/ChameleonTee.jpg" alt="Shirt 4">
+                <aside class="details">
+                    <strong>Name:</strong> <span class="name">Chameleon Tee</span><br>
+                    <strong>Owner:</strong> <span class="owner">Steve Jobless</span><br>
+                    <strong>Price:</strong> <span class="price">$15.00</span>
+					<fieldset class="star-rating">
+						<legend>Rate this product:</legend>
+						<input type="radio" id="star1-chameleontee" name="rating-chameleontee" value="1"><label for="star1-chameleontee" title="1 star">☆</label>
+						<input type="radio" id="star2-chameleontee" name="rating-chameleontee" value="2"><label for="star2-chameleontee" title="2 stars">☆</label>
+						<input type="radio" id="star3-chameleontee" name="rating-chameleontee" value="3"><label for="star3-chameleontee" title="3 stars">☆</label>
+						<input type="radio" id="star4-chameleontee" name="rating-chameleontee" value="4"><label for="star4-chameleontee" title="4 stars">☆</label>
+						<input type="radio" id="star5-chameleontee" name="rating-chameleontee" value="5"><label for="star5-chameleontee" title="5 stars">☆</label>
+					</fieldset>	
+				</aside>
+            </article>
+        </section>
+    </section>
+</main>
+
 
     <!-- Footer Section -->
     <footer>

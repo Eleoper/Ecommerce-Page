@@ -512,3 +512,44 @@ article.item:hover .details {
     display: block; /* Show details on hover */
 }
 
+.details {
+    position: absolute;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: none; /* Hide details initially */
+}
+
+.item:hover .details {
+    display: block; /* Display details on hover */
+}
+
+.star-rating {
+    display: inline-flex;
+    flex-direction: row-reverse; /* Reverse the order to simplify hover highlighting */
+    justify-content: center; /* Center stars horizontally */
+    align-items: center; /* Center stars vertically */
+    width: 100%; /* Ensure the container takes the full width of its parent */
+    padding: 5px; /* Provide some padding around the stars */
+}
+
+.star-rating input[type="radio"] {
+    display: none; /* Hide the radio buttons */
+}
+
+.star-rating label {
+    cursor: pointer;
+    color: #ccc; /* Default color for non-highlighted stars */
+    padding: 0 5px; /* Add padding around each star for better touch targets and spacing */
+    font-size: 24px; /* Adjust font size for better visibility */
+}
+
+/* Hover and check state for the label and any preceding labels in the DOM */
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input:checked ~ label {
+    color: gold; /* Color stars on hover or when selected */
+}
