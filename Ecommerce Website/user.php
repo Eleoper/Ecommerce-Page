@@ -77,33 +77,30 @@
     ?>
     <!-- Login Session -->
     <section class="loginSession">
-        <form>
+        <form action="" method="post">
             <h1>Login</h1>
-            <label>Username</label>
+            <label>Email</label>
             <section class="inputBoxUser">
-                <input id="username" type="text" placeholder="Username" required autofocus>
+                <input id="email" name="email" type="text" placeholder="Email" required autofocus>
             </section>
             
             <label>Password</label>
             <section class="inputBoxUser">
-                <input id="password" type="password" placeholder="Password" required >
+                <input id="password" name="password" type="password" placeholder="Password" required >
             </section>
-
-            <section class="forgot">
-                <a class="userLinks" href="#">Forgot Password?</a>
-            </section>
-            <button type="submit">Login</button>
+            <button type="submit" name="submit">Login</button>
             <br>
             <section class="registerLink">
                 <p>
                     Don't have an Account?
                     <br>
-                    <a class="userLinks" href="register.html">Sign Up Now</a>
+                    <a class="userLinks" href="register.php" style="color:red;">Sign Up Now</a>
                 </p>
             </section>
         </form>
+        <?php } ?>
     </section>
-    <?php } ?>
+    
     <!-- Footer Section -->
     <footer>
         <section class="footerTop">
