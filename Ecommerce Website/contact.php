@@ -87,7 +87,7 @@ if($_POST){
         }
 
         //create a data entry query
-        $sql = "INSERT INTO cartform (id, name, email, message) VALUES ('0', '$name', '$email', '$message')";
+        $sql = "INSERT INTO feedDB (id, name, email, message) VALUES ('0', '$name', '$email', '$message')";
 
         //send query to database
         $rs = mysqli_query($con, $sql);
