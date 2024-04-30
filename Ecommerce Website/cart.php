@@ -6,7 +6,6 @@ $adress = $_POST['address'];
 $zip = $_POST['zip'];
 $country = $_POST['country'];
 
-
 if($_POST){
 	if (!$fname || !$adress || !$zip || !$country) {
 		//check for customer info, if empty echo the page with error message
@@ -74,30 +73,21 @@ if($_POST){
         </body>
         </html>';
 	}
-	else{//if good, create database in local host and echo thank you message
-        $host = "localhost";
-        $username= "cartDB";
-        $password = "";
-        $dbname = "cartDB";
+	else{//if good, create database connection in local host and echo thank you message
 
-        //CREAT DB connection
-        $conn = new mysqli($host, $username, $password, $dbname);
-
-        //Check connection
-        if (!$conn){
-            die("Connection failed: " . mysqli_connect_error());
-        }
+        //Verifies connection
+        $conn = mysqli_connect("localhost","root","","ecommerceproject") or die("Could not Connect");
 
         //create a data entry query
-        $sql = "INSERT INTO cartform (id, fname, lname, adress, zip, country) VALUES ('0', '$fname', '$lname', '$adress', '$zip', '$country')";
+        $sql = "INSERT INTO cartform (fname, lname, address, zip, country) VALUES ('$fname', '$lname', '$adress', '$zip', '$country')";
 
         //send query to database
-        $rs = mysqli_query($con, $sql);
+        $rs = mysqli_query($conn, $sql);
         if($rs){
             echo "Entries added!";
         }
 
-        mysqli_close($con);
+        mysqli_close($conn);
         echo'
              <!DOCTYPE html>
              <html lang="en">
@@ -140,7 +130,7 @@ if($_POST){
                      </nav>
                  </header>
                  <main class="cart-content">
-                 <h2>Your message was sent. We will contact you soon.<br />
+                 <h2>Your message was sent. We will contact you soon your receipt!<br/>
                 Thank you!</h2>
                 <p>Go back to the <a href="index.html"><i>homepage.</i></a></p>
                 </main>

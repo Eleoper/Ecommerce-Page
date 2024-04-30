@@ -1,4 +1,3 @@
-
 <?php
 $name = $_POST['name'];
 $email = $_POST['email'];
@@ -72,30 +71,21 @@ if($_POST){
         </body>
         </html>';
 	}
-	else{//if good, create database in local host and echo thank you message
-        $host = "localhost";
-        $username= "feedDB";
-        $password = "";
-        $dbname = "feedDB";
+	else{
 
-        //CREAT DB connection
-        $conn = new mysqli($host, $username, $password, $dbname);
-
-        //Check connection
-        if (!$conn){
-            die("Connection failed: " . mysqli_connect_error());
-        }
+        //Verifies connection
+        $conn = mysqli_connect("localhost","root","","ecommerceproject") or die("Could not Connect");
 
         //create a data entry query
-        $sql = "INSERT INTO feedDB (id, name, email, message) VALUES ('0', '$name', '$email', '$message')";
+        $sql = "INSERT INTO feedDB (name, email, message) VALUES ('$name', '$email', '$message')";
 
         //send query to database
-        $rs = mysqli_query($con, $sql);
+        $rs = mysqli_query($conn, $sql);
         if($rs){
             echo "Entries added!";
         }
 
-        mysqli_close($con);
+        mysqli_close($conn);
         echo'
              <!DOCTYPE html>
              <html lang="en">

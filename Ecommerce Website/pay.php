@@ -1,5 +1,5 @@
 <?php
-$cardnum = $_POST['cart-number'];
+$cardnum = $_POST['card-number'];
 $cvv = $_POST['cvv'];
 $month = $_POST['month'];
 $year = $_POST['year'];
@@ -73,29 +73,20 @@ if($_POST){
         </html>';
 	}
 	else{//if good, create database on local host, and echo the thank you message
-        $host = "localhost";
-        $username= "cartDB";
-        $password = "";
-        $dbname = "payDB";
 
-        //CREAT DB connection
-        $conn = new mysqli($host, $username, $password, $dbname);
-
-        //Check connection
-        if (!$conn){
-            die("Connection failed: " . mysqli_connect_error());
-        }
+        //Verifies connection
+        $conn = mysqli_connect("localhost","root","","ecommerceproject") or die("Could not Connect");
 
         //create a data entry query
-        $sql = "INSERT INTO payform (id, cardnumber, cvv, mon, yea) VALUES ('0', '$cardnum', '$cvv', '$month', '$year')";
+        $sql = "INSERT INTO payform (cardnum, cvv, month, year) VALUES ('$cardnum', '$cvv', '$month', '$year')";
 
         //send query to database
-        $rs = mysqli_query($con, $sql);
+        $rs = mysqli_query($conn, $sql);
         if($rs){
             echo "Entries added!";
         }
 
-        mysqli_close($con);
+        mysqli_close($conn);
         echo'
              <!DOCTYPE html>
              <html lang="en">

@@ -60,7 +60,7 @@
                 $id = $_SESSION['id'];
                 
                 $edit_query = mysqli_query($con,"UPDATE users SET Username='$username', Email='$email',
-                    Birthdate='$birthdate', Password='$password' WHERE Id=$id") or die("Error Occured");
+                    Birthdate='$birthdate' WHERE Id=$id") or die("Error Occured");
 
                 if($edit_query){
                     echo "<div class='box-check'>
