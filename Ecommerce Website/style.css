@@ -262,64 +262,6 @@ section.cart-container{
     }
         
 }
-/*media screen for cart page store header*/
-@media only screen and (max-width: 600px) {
-    .store-header{
-        padding: 10px 20px 10px;
-        /* Hide the default checkbox */
-        .custom-checkbox input {
-        display: none;
-        }
-    
-        /* Create a custom checkbox */
-        .custom-checkbox .checkmark {
-        position: relative;
-        top: 0;
-        left: 0;
-        height: 30px;
-        width: 30px;
-        border-color: #000000;
-        background-color: #eee;
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: 8px;
-        }
-    
-    
-        .custom-checkbox input:checked + .checkmark {
-        background-color: #000000;
-        }
-    
-        .custom-checkbox .checkmark:after {
-        content: "";
-        position: absolute;
-        display: none;
-        }
-    
-    
-        .custom-checkbox input:checked + .checkmark:after {
-        display: block;
-        }
-    
-        /* Style the checkmark/indicator */
-        .custom-checkbox .checkmark:after {
-            left: 10px;
-            top: 5px;
-            width: 8px;
-            height: 15px;
-            border: solid white;
-            border-width: 0 5px 5px 0;
-            transform: rotate(45deg);
-        }
-        label {
-            font-weight: bold;
-            color: #333;
-            font-size: 20px;
-        }
-            
-    }
-    
-}
 
 /* Cart items and details */
 .cart-item {
@@ -336,29 +278,6 @@ section.cart-container{
     overflow: hidden;
     object-fit: cover;
     font-size: 12px;
-}
-/* add media screen for images*/
-@media only screen and (max-width: 600px) {
-    .cart-item {
-        display: flex;
-        align-items: center;
-        border-bottom: 1px solid #ccc;
-        padding: 15px 0;
-    }
-    .cart-item-image {
-        width: 600px;
-        height: 120px;
-        margin-left: 80px;
-        overflow: hidden;
-        object-fit:cover;
-        font-size: 12px;
-    }
-    .item-details {
-        margin-left: 15px;
-        margin-right: 10px;
-        flex-grow: 1;
-    }
-    
 }
 
 .item-details {
@@ -468,31 +387,6 @@ input[type=submit] {
 	align-items: center; /* Center the items vertically */
 }
 
-/* Responsive Media Queries */
-@media (max-width: 768px) {
-    .productDisplay {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid columns for smaller screens */
-    }
-
-    .item-container {
-        padding: 10px;
-    }
-
-    .details, .star-rating label {
-        font-size: 20px; /* Smaller font size for smaller devices */
-    }
-}
-
-@media (max-width: 480px) {
-    header nav {
-        flex-direction: column; /* Stack nav items vertically on very small screens */
-    }
-
-    .searchBar, .sideBar a, .footerTop a i, .footerMid a {
-        font-size: smaller; /* Smaller font sizes for readability on small devices */
-    }
-}
-
 .featuredProducts {
     display: grid;
     /* Set minimum width of each grid item to 270px, allowing them to grow as needed */
@@ -537,7 +431,113 @@ input[type=submit] {
     }
 }
 
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .productDisplay {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid columns for smaller screens */
+    }
 
+    .item-container {
+        padding: 10px;
+    }
+
+    .details, .star-rating label {
+        font-size: 20px; /* Smaller font size for smaller devices */
+    }
+}
+
+@media (max-width: 480px) {
+    header nav {
+        flex-direction: column; /* Stack nav items vertically on very small screens */
+    }
+
+    .searchBar, .sideBar a, .footerTop a i, .footerMid a {
+        font-size: smaller; /* Smaller font sizes for readability on small devices */
+    }
+}
+
+/* add media screen for images*/
+@media only screen and (max-width: 600px) {
+    .cart-item {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+        padding: 15px 0;
+    }
+    .cart-item-image {
+        width: 600px;
+        height: 120px;
+        margin-left: 80px;
+        overflow: hidden;
+        object-fit:cover;
+        font-size: 12px;
+    }
+    .item-details {
+        margin-left: 15px;
+        margin-right: 10px;
+        flex-grow: 1;
+    }
+    
+}
+
+/*media screen for cart page store header*/
+@media only screen and (max-width: 600px) {
+    .store-header{
+        padding: 10px 20px 10px;
+        /* Hide the default checkbox */
+        .custom-checkbox input {
+        display: none;
+        }
+    
+        /* Create a custom checkbox */
+        .custom-checkbox .checkmark {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 30px;
+        width: 30px;
+        border-color: #000000;
+        background-color: #eee;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 8px;
+        }
+    
+    
+        .custom-checkbox input:checked + .checkmark {
+        background-color: #000000;
+        }
+    
+        .custom-checkbox .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+        }
+    
+    
+        .custom-checkbox input:checked + .checkmark:after {
+        display: block;
+        }
+    
+        /* Style the checkmark/indicator */
+        .custom-checkbox .checkmark:after {
+            left: 10px;
+            top: 5px;
+            width: 8px;
+            height: 15px;
+            border: solid white;
+            border-width: 0 5px 5px 0;
+            transform: rotate(45deg);
+        }
+        label {
+            font-weight: bold;
+            color: #333;
+            font-size: 20px;
+        }
+            
+    }
+    
+}
 
 .productItem {
 	text-align: center; /* Center the text below the image */
@@ -559,7 +559,6 @@ input[type=submit] {
     /* gap: 20px; /* Space between grid items */ */
     /* width: 100%; /* Grid container takes full width of its container */ */
     /* align-items: stretch; /* Stretches items to fill the container height */ */
-}
 
 .item {
     display: flex; /* Flexbox for further alignment of content inside each item */
