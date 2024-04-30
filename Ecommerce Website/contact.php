@@ -77,7 +77,7 @@ if($_POST){
         $conn = mysqli_connect("localhost","root","","ecommerceproject") or die("Could not Connect");
 
         //create a data entry query
-        $sql = "INSERT INTO feedDB (name, email, message) VALUES ('$name', '$email', '$message')";
+        $sql = "INSERT INTO messages (name, email, message) VALUES ('$name', '$email', '$message')";
 
         //send query to database
         $rs = mysqli_query($conn, $sql);
